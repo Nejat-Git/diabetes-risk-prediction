@@ -212,7 +212,8 @@ with st.form("diabetes_form"):
             min_value=0.0,
             value=28.5
         )
-st.markdown(
+
+        st.markdown(
             '<p class="section-title">Other Information</p>',
             unsafe_allow_html=True
         )
@@ -222,7 +223,6 @@ st.markdown(
             min_value=0.0,
             value=0.45
         )
-
     submitted = st.form_submit_button(
         "Predict Diabetes Risk",
         use_container_width=True
