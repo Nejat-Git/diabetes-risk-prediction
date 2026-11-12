@@ -270,9 +270,28 @@ if submitted:
         f"{risk_score} / 5"
     )
 
-    result_col2.metric(
-        "Risk Level",
-        risk_labels[risk_score]
+    result_col2.markdown(
+        f"""
+        <div style="
+            background-color: white;
+            padding: 15px 5px;
+            border-radius: 10px;
+            text-align: center;
+            min-height: 110px;
+        ">
+            <p style="color: #486581; font-size: 14px;">
+                Risk Level
+            </p>
+            <h4 style="
+                color: #102A43;
+                font-size: 18px;
+                white-space: normal;
+                overflow-wrap: anywhere;
+                margin: 0;
+            ">{risk_labels[risk_score]}</h4>
+        </div>
+        """,
+        unsafe_allow_html=True
     )
 
     result_col3.metric(
