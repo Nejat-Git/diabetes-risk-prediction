@@ -13,7 +13,7 @@ st.set_page_config(
 
 # Load trained model
 MODEL_PATH = os.path.join(
-    os.path.dirname(_file_),
+    os.path.dirname(__file__),
     "Models",
     "adaboost_final.pkl"
 )
